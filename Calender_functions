@@ -1,0 +1,19 @@
+###To convert a month name to a datetime.datetime instance, call datetime.datetime.strptime(date_string, format) with date_string as 
+the string containing the month name and format as "%B" for full month names and "%b" for abbreviated month name.###
+
+
+month_name = "Jan"
+datetime_object = datetime.datetime.strptime(month_name, "%b")
+month_number = datetime_object.month
+print(month_number)
+
+
+###To convert a month number to a datetime.datetime instance, call datetime.datetime.strptime(date_string, format) with date_string
+as the string containing the month number and format as "%m".
+Call datetime.datetime.strftime(format) on the result of the previous step with format as "%B" for full month names
+and "%b" for abbreviated month name..###
+
+month_number = "3"
+datetime_object = datetime.datetime.strptime(month_number, "%m")
+month_name = datetime_object.strftime("%b")
+print(month_name)
